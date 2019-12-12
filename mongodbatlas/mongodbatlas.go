@@ -48,7 +48,7 @@ type Client struct {
 	MaintenanceWindows               MaintenanceWindowsService
 	Teams                            TeamsService
 	AtlasUsers                       AtlasUsersService
-	Auditings                        AuditingsService
+	Auditing                         AuditingsService
 
 	onRequestCompleted RequestCompletionCallback
 }
@@ -156,7 +156,7 @@ func NewClient(httpClient *http.Client) *Client {
 	c.MaintenanceWindows = &MaintenanceWindowsServiceOp{client: c}
 	c.Teams = &TeamsServiceOp{client: c}
 	c.AtlasUsers = &AtlasUsersServiceOp{client: c}
-	c.Auditings = &AuditingsServiceOp{client: c}
+	c.Auditing = &AuditingsServiceOp{client: c}
 
 	return c
 }
